@@ -4,9 +4,61 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ea1fee525914154e6d6bbf071697b5a1",
-    "content-hash": "8b1485987e7c5949da82435d403e52e8",
+    "hash": "ee1b047413b46c017cc94ad81428adea",
+    "content-hash": "e6eb148e1965e0c14642d48750c08bdb",
     "packages": [
+        {
+            "name": "acacha/admin-lte-template-laravel",
+            "version": "2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/acacha/adminlte-laravel.git",
+                "reference": "4036a70a13c990783bad19b40016f4958af8c479"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/acacha/adminlte-laravel/zipball/4036a70a13c990783bad19b40016f4958af8c479",
+                "reference": "4036a70a13c990783bad19b40016f4958af8c479",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "~5.0",
+                "illuminate/support": "~5.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "Acacha\\AdminLTETemplateLaravel\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergi Tur Badenas",
+                    "email": "sergiturbadenas@gmail.com",
+                    "homepage": "http://acacha.org"
+                }
+            ],
+            "description": "AdminLTE template applied to Laravel Scaffolding",
+            "keywords": [
+                "AdminLTE",
+                "admin",
+                "admin-lte",
+                "administrator",
+                "bootstrap",
+                "laravel",
+                "template",
+                "theme"
+            ],
+            "time": "2016-01-03 12:53:44"
+        },
         {
             "name": "classpreloader/classpreloader",
             "version": "3.0.0",
