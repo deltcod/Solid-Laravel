@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
         $faker = Faker\Factory::create();
 
         $this->seedInvoices($faker);
-        
+
     }
 
     private function seedInvoices($faker)
