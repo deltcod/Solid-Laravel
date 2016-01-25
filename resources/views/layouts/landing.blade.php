@@ -240,8 +240,10 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
 
         <div class="col-lg-7">
             <h3>Drop Us A Line</h3>
+            {{Session::get('notification')}}
             <br>
-            <form role="form" action="#" method="post" enctype="plain">
+            <form role="form" action="/sendContactEmail" method="post" enctype="plain">
+                {{csrf_field()}}
                 <div class="form-group">
                     <label for="name1">Your Name</label>
                     <input type="name" name="Name" class="form-control" id="name1" placeholder="Your Name">

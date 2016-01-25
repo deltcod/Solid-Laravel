@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -26,7 +22,13 @@ Route::get('/', function () {
 |
 */
 
+App::bind(App\Repositories\RepositoryInterface::class,
+    App\Repositories\InvoiceRepository::class);
+
 Route::group(['middleware' => ['web']], function () {
+
+    Route::get('/',['as' => 'welcome',
+        'uses'=>'WelcomeController@index']);
 
     Route::get('/invoices', [
         'middleware' => 'auth',
@@ -36,7 +38,6 @@ Route::group(['middleware' => ['web']], function () {
     Route::auth();
 
     Route::get('/home', 'HomeController@index');
-});
 
-App::bind(App\Repositories\RepositoryInterface::class,
-    App\Repositories\InvoiceRepository::class);
+    Route::post('sendContactEmail', 'ContactEmailController@send');
+});
