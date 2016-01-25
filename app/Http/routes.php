@@ -37,3 +37,6 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/home', 'HomeController@index');
 });
+
+App::bind(App\Repositories\RepositoryInterface::class,
+    App\Repositories\InvoiceRepository::class);

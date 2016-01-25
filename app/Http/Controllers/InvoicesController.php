@@ -2,15 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Repositories\InvoiceRepository;
 use App\Http\Requests;
 use App\Repositories\RepositoryInterface;
 use App\Transformers\InvoicesTransformer;
 
 
+/**
+ * Class InvoicesController
+ * @package App\Http\Controllers
+ */
 class InvoicesController extends Controller
 {
 
+    /**
+     * @var RepositoryInterface
+     */
     protected $repo;
 
     /**
@@ -20,16 +26,19 @@ class InvoicesController extends Controller
      * DEPENDENCY INJECTION
      */
 
-    public function __construct(InvoiceRepository $repo, InvoicesTransformer $invoicesTransform)
+    public function __construct(RepositoryInterface $repo, InvoicesTransformer $invoicesTransform)
     {
         $this->invoicesTransform = $invoicesTransform;
         $this->repo = $repo;
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function index()
     {
-        $invoices = $this->invoicesTransform->transform(
-            $this->repo->all());
+        $invoices = $this->invoicesTransform->transform($this->repo->all());
+
         return view('invoices',compact('invoices'));
 
 
