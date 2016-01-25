@@ -47,7 +47,7 @@ abstract class Repository implements RepositoryInterface
      */
     public function all()
     {
-        return $this->model::all();
+        return $this->model->all();
     }
 
     /**
