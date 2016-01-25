@@ -10,6 +10,7 @@ namespace App\Repositories;
 
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\App;
 use Mockery\CountValidator\Exception;
 
 abstract class Repository implements RepositoryInterface
@@ -34,7 +35,7 @@ abstract class Repository implements RepositoryInterface
 
         $model = App::make($this->model());
 
-        if ($model instanceof Model){
+        if (!$model instanceof Model){
             throw new Exception;
         }
 
