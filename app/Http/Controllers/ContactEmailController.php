@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Flash;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -19,9 +20,13 @@ class ContactEmailController extends Controller
 
         //FLASH NOTIFICATION
         $request->session()->flash(
-            'notification',
-            'All ok!'
+            'flash_message',
+            'Sent email correctly!'
         );
+
+//        $flash = app('\App\Http\Flash');
+//
+//        $flash->message("Ok!");
 
         //REDIRECT WELCOME
         return redirect()->route('welcome');

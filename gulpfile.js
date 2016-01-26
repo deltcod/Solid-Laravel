@@ -15,4 +15,12 @@ elixir(function(mix) {
     mix.less('app.less');
     mix.less('admin-lte/AdminLTE.less');
     mix.less('bootstrap/bootstrap.less');
+
+    mix.styles([
+        'sweetalert.css'
+    ]);
+
+    mix.scripts([
+        'sweetalert-dev.js'
+    ]);
 });

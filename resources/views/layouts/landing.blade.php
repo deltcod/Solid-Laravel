@@ -23,6 +23,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
     <script src="{{ asset('/plugins/jQuery/jQuery-2.1.4.min.js') }}"></script>
     <script src="{{ asset('/js/smoothscroll.js') }}"></script>
 
+    <link rel="stylesheet" type="text/css" href="css/all.css">
 
 </head>
 
@@ -286,5 +287,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
         interval: 3500
     })
 </script>
+<script src="js/all.js"></script>
+@include('layouts.partials.flashmessage');
 </body>
 </html>
