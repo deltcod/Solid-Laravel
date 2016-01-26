@@ -25,7 +25,7 @@
 App::bind(App\Repositories\RepositoryInterface::class,
     App\Repositories\InvoiceRepository::class);
 
-Route::group(['middleware' => ['web']], function () {
+Route::group(['middleware' => ['web', 'pjax']], function () {
 
     Route::get('/',['as' => 'welcome',
         'uses'=>'WelcomeController@index']);
@@ -40,4 +40,16 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/home', 'HomeController@index');
 
     Route::post('sendContactEmail', 'ContactEmailController@send');
+
+    Route::get('apartat1', function(){
+       return view('apartat1');
+    });
+
+    Route::get('apartat2', function(){
+        return view('apartat2');
+    });
+
+    Route::get('apartat3', function(){
+        return view('apartat3');
+    });
 });

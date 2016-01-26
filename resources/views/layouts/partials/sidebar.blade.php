@@ -36,6 +36,10 @@
             <li class="active"><a href="{{ url('home') }}"><i class='fa fa-link'></i> <span>Home</span></a></li>
             <li><a href="{{url('invoices')}}"><i class='fa fa-link'></i> <span>Invoices</span></a></li>
             <li class="treeview">
+            <li><a href="apartat1">Apartat 1</a></li>
+            <li><a href="apartat2">Apartat 2</a></li>
+            <li><a href="apartat3">Apartat 3</a></li>
+
                 <a href="#"><i class='fa fa-link'></i> <span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="#">Link in level 2</a></li>

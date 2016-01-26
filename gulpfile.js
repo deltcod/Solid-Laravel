@@ -16,11 +16,14 @@ elixir(function(mix) {
     mix.less('admin-lte/AdminLTE.less');
     mix.less('bootstrap/bootstrap.less');
 
+    mix.copy('bower_components/jquery-pjax/jquery.pjax.js', 'resources/assets/js');
+
     mix.styles([
         'sweetalert.css'
     ]);
 
     mix.scripts([
-        'sweetalert-dev.js'
+        'sweetalert-dev.js',
+        'jquery.pjax.js'
     ]);
 });
