@@ -12,6 +12,18 @@ use Illuminate\Support\Facades\Input;
 
 class ContactEmailController extends Controller
 {
+    protected $user;
+
+    /**
+     * ContactEmailController constructor.
+     * @param $user
+     */
+    public function __construct($user)
+    {
+        $this->user = $user;
+    }
+
+
     public function send(Request $request)
     {
         //dd(Input::all());
@@ -36,6 +48,8 @@ class ContactEmailController extends Controller
 
     public function sendEmail()
     {
-        $this->dispatch(new SendSubscriptionEmail());
+        $this->user->email = "adamalvarado@iesebre.com";
+        $this->dispatch(new SendSubscriptionEmail($this->user));
+        echo 'Done!';
     }
 }
