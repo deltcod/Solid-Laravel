@@ -53,3 +53,5 @@ Route::group(['middleware' => ['web', 'pjax']], function () {
         return view('apartat3');
     });
 });
+
+include "test-rourtes.php";
