@@ -40,10 +40,10 @@
             <li><a href="apartat2">Apartat 2</a></li>
             <li><a href="apartat3">Apartat 3</a></li>
 
-                <a href="#"><i class='fa fa-link'></i> <span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <li><a href="#"><i class='fa fa-link'></i> <span>Pricing Tables</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="#">Link in level 2</a></li>
-                    <li><a href="#">Link in level 2</a></li>
+                    <li><a href="{{ url('mypricingtable') }}">My Pricing Tables</a></li>
+                    <li><a href="{{url('otherpricingtable')}}">Bootstrap</a></li>
                 </ul>
             </li>
         </ul><!-- /.sidebar-menu -->

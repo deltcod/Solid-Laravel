@@ -19,7 +19,8 @@ elixir(function(mix) {
     mix.copy('bower_components/jquery-pjax/jquery.pjax.js', 'resources/assets/js');
 
     mix.styles([
-        'sweetalert.css'
+        'sweetalert.css',
+        'mypricingtable.css'
     ]);
 
     mix.scripts([

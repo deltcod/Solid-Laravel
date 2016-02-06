@@ -5,6 +5,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 -->
 <html lang="en">
 
+<link rel="stylesheet" type="text/css" href="css/all.css">
+
 @include('layouts.partials.htmlheader')
 
 <!--
